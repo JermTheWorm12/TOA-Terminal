@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>TOA Terminal</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>TOA_TERMINAL</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="login-frame" class="centered">
-        <h1>TERMINAL</h1>
-        <input type="text" id="username" placeholder="Username"><br>
-        <input type="password" id="password" placeholder="Password"><br>
-        <button id="login-btn">INITIALIZE ACCESS</button>
-    </div>
 
-    <div id="terminal-frame" class="hidden">
-        <div id="tree-container"></div>
-    </div>
+<div id="login">
+<h1>TERMINAL</h1>
 
-    <!-- File popup -->
-    <div id="file-popup" class="hidden">
-        <div id="popup-content">
-            <h2 id="file-title"></h2>
-            <textarea id="file-text"></textarea>
-            <button id="close-popup">CLOSE</button>
-        </div>
-    </div>
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
 
-    <script src="script.js"></script>
+<button onclick="login()">INITIALIZE ACCESS</button>
+</div>
+
+<div id="terminal" class="hidden">
+<ul id="tree"></ul>
+</div>
+
+<div id="popup" class="hidden">
+<div id="popupBox">
+<h2 id="fileTitle"></h2>
+
+<textarea id="fileText"></textarea>
+
+<button onclick="closePopup()">CLOSE</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
